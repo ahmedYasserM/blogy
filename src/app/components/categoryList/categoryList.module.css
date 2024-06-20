@@ -6,7 +6,8 @@
 }
 
 .categories {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
   gap: 1.5rem;
 }
 
@@ -28,4 +29,27 @@
 .category>img {
   border-radius: 50%;
   object-fit: cover;
+}
+
+@media (max-width: 1280px) {
+  /*.category {*/
+  /*  padding: 0.75rem;*/
+  /*  gap: 0.75rem;*/
+  /*}*/
+
+  .categories {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .categories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .categories {
+    grid-template-columns: 1fr;
+  }
 }
