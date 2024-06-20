@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  margin-top: 4rem;
+  justify-content: space-between;
+}
+
+.button {
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+  border: 1px solid var(--text);
+  background-color: var(--bg);
+  color: var(--text);
+  font-weight: 500;
+  transition: background-color 0.4s ease-in-out;
+}
+
+.button:hover {
+  background-color: var(--softBg);
+}
