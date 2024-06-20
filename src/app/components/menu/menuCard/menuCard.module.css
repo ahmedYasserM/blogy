@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.imageContainer {
+  position: relative;
+  min-height: 70px;
+  min-width: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.imageContainer>img {
+  object-fit: cover;
+}
+
+.textContainer {
+  display: flex;
+  flex: 5;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.patch {
+  font-size: 1rem;
+  color: var(--categoryText);
+  border-radius: 30px;
+  width: fit-content;
+  padding: 0.25rem 0.5rem;
+  text-transform: capitalize;
+}
+
+.content {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.metadata {
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  text-transform: capitalize;
+}
+
+.author {
+  font-weight: 600;
+}
+
+.date {
+  color: var(--softText);
+}
