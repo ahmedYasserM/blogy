@@ -47,7 +47,7 @@ div.social>Link {
   }
 
   div.logo {
-    text-align: left;
+    padding-left: 0;
   }
 }
 
