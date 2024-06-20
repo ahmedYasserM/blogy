@@ -1,9 +1,10 @@
-:root {
-  --bg: white;
-  --text: black;
-  --softBg: #f0f0f0;
-  --softText: #626262;
-}
+/*:root {*/
+/*  --lightBg: #eff3e7;*/
+/*  --text: black;*/
+/*  --softBg: #f0f0f0;*/
+/*  --softText: #626262;*/
+/*  --transition-speed: 400ms;*/
+/*}*/
 
 * {
   box-sizing: border-box;
@@ -21,6 +22,21 @@ a {
   text-decoration: none;
 }
 
+.dark {
+  --bg: #202e33;
+  --text: #ddd;
+  --softBg: #3a555e;
+  --softText: #a6a6a6;
+}
+
+.light {
+  --bg: #eff3e7;
+  --text: black;
+  --softBg: #e0ebca;
+  --softText: #626262;
+  --transition-speed: 400ms;
+}
+
 .container {
   min-height: 100vh;
   background-color: var(--bg);
@@ -29,7 +45,6 @@ a {
 
 .wrapper {
   max-width: 1536px;
-  background-color: lightskyblue;
   margin-inline: auto;
   padding: 0 5rem;
 }
