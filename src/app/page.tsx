@@ -1,34 +1,19 @@
 import Link from "next/link";
 import styles from "./page.module.css";
+import Features from "./components/features/Features";
+import CategoryList from "./components/categoryList/CategoryList";
+import CardList from "./components/cardList/CardList";
+import Menu from "./components/menu/Menu";
 
 export default function Home() {
   return (
-    <div>
-      <Link href="/">
-        <h1>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam
-          quam excepturi consequuntur odio obcaecati et aspernatur
-          reprehenderit, optio soluta hic, deleniti consequatur? Dicta
-          recusandae blanditiis odio corporis omnis ullam itaque.
-        </h1>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem cumque
-        odio reiciendis praesentium fugiat natus voluptas at quas nulla eius eos
-        distinctio, ipsam sapiente, labore iusto animi facere obcaecati ad?
-        Ullam sunt accusantium libero voluptatem sint aspernatur rerum officiis,
-        id nobis amet hic voluptas, laudantium architecto error soluta quo,
-        similique tenetur cumque iure cupiditate earum. Non labore soluta
-        suscipit id. Qui necessitatibus ad consequatur voluptates quam odit sint
-        ullam, exercitationem assumenda quod incidunt sit, fuga tempora dolorem
-        commodi sed consectetur tenetur veritatis minus et. Quas quaerat nam
-        nihil reiciendis doloremque.Lorem ipsum dolor sit, amet consectetur
-        adipisicing elit. Quibusdam quam excepturi consequuntur odio obcaecati
-        et aspernatur reprehenderit, optio soluta hic, deleniti consequatur?
-        Dicta recusandae blanditiis odio corporis omnis ullam itaque.Lorem ipsum
-        dolor sit, amet consectetur adipisicing elit. Quibusdam quam excepturi
-        consequuntur odio obcaecati et aspernatur reprehenderit, optio soluta
-        hic, deleniti consequatur? Dicta recusandae blanditiis odio corporis
-        omnis ullam itaque.
-      </Link>
+    <div className={styles.container}>
+      <Features />
+      <CategoryList />
+      <div className={styles.container}>
+        <CardList />
+        <Menu />
+      </div>
     </div>
   );
 }
