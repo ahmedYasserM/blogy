@@ -1,0 +1,64 @@
+.container {
+  display: flex;
+  gap: 3rem;
+}
+
+.imageContainer {
+  position: relative;
+  min-height: 300px;
+  flex: 1;
+}
+
+.imageContainer>img {
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  flex: 1;
+}
+
+.postTitle {
+  line-height: 1.4;
+}
+
+.metadata {
+  font-size: 1rem;
+}
+
+.timeDate {
+  color: var(--softText);
+  font-weight: 500;
+}
+
+.category {
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--attention);
+}
+
+.postTitle {
+  font-size: 2rem;
+}
+
+.postDescription {
+  font-size: 1.125rem;
+  font-weight: 300;
+  color: var(--softText);
+}
+
+.button {
+  /*padding: 1em 2em;*/
+  width: fit-content;
+  border: none;
+  border-bottom: 2px solid var(--text);
+  padding-bottom: 3px;
+  border-color: var(--attention);
+  background-color: var(--bg);
+  color: var(--softText);
+  font-weight: 600;
+  cursor: pointer;
+}
