@@ -54,8 +54,8 @@ export default function CategoryList(): React.JSX.Element {
             <Image
               src={category.image}
               alt={category.name}
-              width={30}
-              height={30}
+              width={40}
+              height={40}
             />
             <p>{category.name}</p>
           </div>

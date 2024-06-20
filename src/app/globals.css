@@ -27,6 +27,7 @@ a {
   --text: #fff;
   --softBg: #3a555e;
   --softText: #a6a6a6;
+  --attention: olive;
 }
 
 .light {
@@ -35,6 +36,7 @@ a {
   --softBg: #e0ebca;
   --softText: #626262;
   --transition-speed: 400ms;
+  --attention: darkred;
 }
 
 .container {
