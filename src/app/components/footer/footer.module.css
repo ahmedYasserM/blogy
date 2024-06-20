@@ -1,0 +1,55 @@
+.container {
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex: 1;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logoContainer>img {
+  border-radius: 50%;
+  object-fit: cover;
+  padding: 3px;
+  border: 1px solid #e0ebca;
+}
+
+.description {
+  font-size: 1rem;
+  font-weight: 400;
+  max-width: 60ch;
+  color: var(--softText);
+}
+
+.links {
+  display: flex;
+  gap: 8rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+  flex: 1;
+  font-size: 1rem;
+  color: var(--softText);
+}
+
+.linkHeader {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text);
+}
