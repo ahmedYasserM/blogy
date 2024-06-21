@@ -3,6 +3,7 @@
   display: flex;
   align-items: center;
   padding-bottom: 1rem;
+  gap: 4rem;
 }
 
 .info {
@@ -21,14 +22,17 @@
 .logoContainer>img {
   border-radius: 50%;
   object-fit: cover;
-  padding: 3px;
   border: 1px solid #e0ebca;
+}
+
+.logo {
+  font-size: 2.25rem;
+  font-weight: 700;
 }
 
 .description {
   font-size: 1rem;
   font-weight: 400;
-  max-width: 60ch;
   color: var(--softText);
 }
 
@@ -52,4 +56,40 @@
   font-size: 1.5rem;
   font-weight: 500;
   color: var(--text);
+}
+
+@media (max-width: 1280px) {
+  .links {
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .links {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .linkHeader {
+    font-size: 1.25rem;
+  }
+
+  .links {
+    gap: 6rem;
+    font-size: 0.75rem;
+  }
+
+  .logo {
+    font-size: 1.75rem;
+  }
+
+  .logoContainer>img {
+    width: 35px;
+    height: 35px;
+  }
 }

@@ -1,0 +1,14 @@
+.title {
+  background-color: darkkhaki;
+  padding: 1rem 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+}
+
+.content {
+  margin-top: 4rem;
+  display: flex;
+  gap: 4rem;
+}

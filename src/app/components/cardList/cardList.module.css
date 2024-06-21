@@ -1,0 +1,26 @@
+.container {
+  flex: 5;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 640px) {
+  .title {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 1280px) {
+  .posts {
+    gap: 3rem;
+  }
+}

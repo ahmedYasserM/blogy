@@ -17,7 +17,7 @@
 .contentContainer {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1rem;
   flex: 1;
 }
 
@@ -61,4 +61,11 @@
   color: var(--softText);
   font-weight: 600;
   cursor: pointer;
+}
+
+@media (max-width: 1280px) {
+  .container {
+    flex-direction: column;
+    gap: 2rem;
+  }
 }

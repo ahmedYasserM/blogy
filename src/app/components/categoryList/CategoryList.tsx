@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./categoryList.module.css";
+import Link from "next/link";
 
 type CategoryType = {
   name: string;
@@ -46,7 +47,8 @@ export default function CategoryList(): React.JSX.Element {
       <h1 className={styles.title}>Popular Categories</h1>
       <div className={styles.categories}>
         {categories.map((category, index) => (
-          <div
+          <Link
+            href={`/blog?cat=${category.name.toLowerCase()}`}
             key={index}
             className={styles.category}
             style={{ backgroundColor: category.color }}
@@ -58,7 +60,7 @@ export default function CategoryList(): React.JSX.Element {
               height={40}
             />
             <p>{category.name}</p>
-          </div>
+          </Link>
         ))}
       </div>
     </section>

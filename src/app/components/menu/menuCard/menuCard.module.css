@@ -34,7 +34,7 @@
 }
 
 .content {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 400;
 }
 
@@ -50,4 +50,14 @@
 
 .date {
   color: var(--softText);
+}
+
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .imageContainer {
+    align-self: flex-start;
+  }
 }

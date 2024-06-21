@@ -1,10 +1,6 @@
-/*:root {*/
-/*  --lightBg: #eff3e7;*/
-/*  --text: black;*/
-/*  --softBg: #f0f0f0;*/
-/*  --softText: #626262;*/
-/*  --transition-speed: 400ms;*/
-/*}*/
+:root {
+  --categoryText: #20211f;
+}
 
 * {
   box-sizing: border-box;
@@ -49,6 +45,14 @@ a {
   max-width: 1536px;
   margin-inline: auto;
   padding: 0 5rem;
+}
+
+.ql-editor {
+  font-size: 1.6rem;
+}
+
+.quill>.ql-container>.ql-editor.ql-blank::before {
+  color: #b3b3b1;
 }
 
 @media (max-width: 1536px) {
