@@ -9,7 +9,9 @@ export default function Navbar(): React.JSX.Element {
     <nav className={styles.container}>
       <SocialLinks />
 
-      <div className={styles.logo}>blogy</div>
+      <Link href="/" className={styles.logo}>
+        Blogy
+      </Link>
       <div className={styles.links}>
         <ThemeToggle />
         <Link className={styles.navLink} href="/">

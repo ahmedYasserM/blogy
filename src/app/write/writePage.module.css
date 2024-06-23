@@ -71,13 +71,79 @@
   font-weight: 600;
   border: none;
   outline: none;
-  border-radius: 40px;
+  border-radius: 20px;
   background-color: #d1f172;
   color: #111;
   cursor: pointer;
   transition: transform 0.4s ease-in-out;
+  font-size: 0.75rem;
 }
 
 .publishButton:hover {
   transform: translateY(-0.5rem);
+}
+
+.select {
+  position: absolute;
+  min-width: 200px;
+  right: 120px;
+  top: -10px;
+}
+
+.select svg {
+  position: absolute;
+  right: 12px;
+  top: calc(50% - 3px);
+  width: 10px;
+  height: 6px;
+  stroke-width: 2px;
+  stroke: #9098a9;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+
+.select select {
+  -webkit-appearance: none;
+  padding: 7px 40px 7px 12px;
+  width: 100%;
+  border: 1px solid #e8eaed;
+  border-radius: 5px;
+  background: var(--softBg);
+  box-shadow: 0 1px 3px -2px #9098a9;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  transition: all 150ms ease;
+}
+
+.select select:required:invalid {
+  color: var(--text);
+}
+
+.select select option {
+  color: var(--text);
+}
+
+.select select option[value=""][disabled] {
+  display: none;
+}
+
+.select select:focus {
+  outline: none;
+  border-color: #d1f172;
+  box-shadow: 0 0 0 2px rgba(0, 119, 255, 0.2);
+}
+
+.select select:hover+svg {
+  stroke: #d1f172;
+}
+
+.sprites {
+  position: absolute;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  user-select: none;
 }

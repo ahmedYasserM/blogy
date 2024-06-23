@@ -10,10 +10,17 @@
   border: 1px solid var(--text);
   background-color: var(--bg);
   color: var(--text);
-  font-weight: 500;
+  font-weight: 600;
   transition: background-color 0.4s ease-in-out;
+  cursor: pointer;
 }
 
 .button:hover {
   background-color: var(--softBg);
+}
+
+.button:disabled {
+  background-color: darkred;
+  color: #fff;
+  cursor: not-allowed;
 }

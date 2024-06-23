@@ -2,12 +2,22 @@ import CardList from "@/app/components/cardList/CardList";
 import Menu from "@/app/components/menu/Menu";
 import styles from "./blogPage.module.css";
 
-export default function Blog(): React.JSX.Element {
+type BlogPageProps = {
+  searchParams: { page: string; cat: string };
+};
+
+export default function BlogPage({
+  searchParams,
+}: BlogPageProps): React.JSX.Element {
+  const page: number = parseInt(searchParams.page || "1");
+  const cat: string = searchParams.cat || "";
+  console.log(`page: ${page}, cat: ${cat}`);
+
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Style Blog</h1>
       <div className={styles.content}>
-        <CardList />
+        <CardList page={page} cat={cat} />
         <Menu />
       </div>
     </div>

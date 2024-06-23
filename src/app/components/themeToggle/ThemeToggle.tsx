@@ -1,13 +1,12 @@
 "use client";
 
-import { useContext } from "react";
 import styles from "./themeToggle.module.css";
 import Image from "next/image";
+import { useContext } from "react";
 import { ThemeContext } from "@/context/ThemeContext";
 
 export default function ThemeToggle(): React.JSX.Element {
   const theme = useContext(ThemeContext);
-  console.log(theme);
   return (
     <div
       className={styles.container}

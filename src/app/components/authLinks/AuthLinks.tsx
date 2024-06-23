@@ -3,14 +3,15 @@
 import Link from "next/link";
 import styles from "./authLinks.module.css";
 import { useState } from "react";
+import { signOut, useSession } from "next-auth/react";
 
 export default function AuthLinks(): React.JSX.Element {
-  const status = "Authenticated";
+  const { status } = useSession();
   const [isOpened, setIsOpened] = useState(false);
 
   return (
     <>
-      {status === "notAuthenticated" ? (
+      {status !== "authenticated" ? (
         <Link className={styles.link} href="/login">
           Login
         </Link>
@@ -19,7 +20,9 @@ export default function AuthLinks(): React.JSX.Element {
           <Link className={styles.link} href="/write">
             Write
           </Link>
-          <span className={styles.link}>Logout</span>
+          <span className={styles.link} onClick={() => signOut()}>
+            Logout
+          </span>
         </>
       )}
 
@@ -33,12 +36,14 @@ export default function AuthLinks(): React.JSX.Element {
           <Link href="/">Home</Link>
           <Link href="/about">About</Link>
           <Link href="/contact">Contact</Link>
-          {status === "notAuthenticated" ? (
+          {status !== "authenticated" ? (
             <Link href="/login">Login</Link>
           ) : (
             <>
               <Link href="/write">Write</Link>
-              <span className={styles.link}>Logout</span>
+              <span className={styles.link} onClick={() => signOut()}>
+                Logout
+              </span>
             </>
           )}
         </div>

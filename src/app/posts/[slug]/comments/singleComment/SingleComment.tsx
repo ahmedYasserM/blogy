@@ -22,7 +22,7 @@ export default function SingleComment({
         </div>
         <div className={styles.metadata}>
           <span>{username}</span>
-          <span className={styles.date}>{date}</span>
+          <span className={styles.date}>{date.slice(0, 10)}</span>
         </div>
       </div>
 
