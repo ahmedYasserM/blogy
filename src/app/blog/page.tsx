@@ -11,7 +11,6 @@ export default function BlogPage({
 }: BlogPageProps): React.JSX.Element {
   const page: number = parseInt(searchParams.page || "1");
   const cat: string = searchParams.cat || "";
-  console.log(`page: ${page}, cat: ${cat}`);
 
   return (
     <div className={styles.container}>

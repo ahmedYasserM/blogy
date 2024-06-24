@@ -1,7 +1,31 @@
 import Image from "next/image";
 import styles from "./features.module.css";
+import Post from "@/types/post";
+import ClientButton from "./clientButton/ClientButton";
+import { extractContent } from "@/utils/textUtils";
 
-export default function Features(): React.JSX.Element {
+type PostWithUser = Post & {
+  username: string;
+  userimg: string;
+};
+
+async function getMostPopularPost() {
+  const res = await fetch(process.env.NEXTAUTH_URL + "/api/posts/popular", {
+    cache: "no-cache",
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch most popular post");
+  }
+
+  const data = await res.json();
+  return data;
+}
+
+export default async function Features() {
+  const { post }: { post: PostWithUser } = await getMostPopularPost();
+  console.log("post => ", post);
+
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>
@@ -9,19 +33,18 @@ export default function Features(): React.JSX.Element {
       </h1>
       <section className={styles.post}>
         <div className={styles.imageContainer}>
-          <Image src="/culture.png" alt="hero section image" fill />
+          <Image
+            src={post.img || "/culture.png"}
+            alt="hero section image"
+            fill
+          />
         </div>
         <div className={styles.textContainer}>
-          <h2 className={styles.postTitle}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit
-          </h2>
+          <h2 className={styles.postTitle}>{post.title}</h2>
           <p className={styles.postDescription}>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit,
-            dolore quis nostrum veniam atque accusantium, repellat impedit vitae
-            iste ex voluptatem! Ullam repudiandae eum ab modi cupiditate
-            inventore, quidem error?
+            {extractContent(post.descr).slice(0, 1000)}
           </p>
-          <button className={styles.postButton}>Reade More</button>
+          <ClientButton slug={post.slug} />
         </div>
       </section>
     </div>

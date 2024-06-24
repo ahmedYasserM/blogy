@@ -10,7 +10,7 @@ export async function GET(req: Request): Promise<Response> {
 
   const offset: number = (page - 1) * limit; // number of posts we need to skip
 
-  const query: string =
+  let query: string =
     cat === ""
       ? `SELECT * FROM posts LIMIT ${limit} OFFSET ${offset}; select * from posts;`
       : `SELECT * FROM posts WHERE catslug = '${cat}' LIMIT ${limit} OFFSET ${offset}; select * from posts where catslug = '${cat}';`;

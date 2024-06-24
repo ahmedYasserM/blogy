@@ -4,7 +4,7 @@ import CategoryList from "./components/categoryList/CategoryList";
 import CardList from "./components/cardList/CardList";
 import Menu from "./components/menu/Menu";
 
-export default function Home({
+export default async function Home({
   searchParams,
 }: {
   searchParams?: {

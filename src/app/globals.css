@@ -48,11 +48,21 @@ a {
 }
 
 .ql-editor {
+  margin-top: 2rem;
   font-size: 1.6rem;
 }
 
-.quill>.ql-container>.ql-editor.ql-blank::before {
+.quill.writePage_textarea__xH3fV {
+  overflow-y: scroll;
+  word-break: break-all;
+}
+
+.quill>.ql-container>.ql-editor.ql-blank::before-container>.ql-editor.ql-blank::before {
   color: #b3b3b1;
+}
+
+.quill::-webkit-scrollbar {
+  display: none;
 }
 
 @media (max-width: 1536px) {
@@ -84,4 +94,3 @@ a {
   .wrapper {
     max-width: 475px;
   }
-}

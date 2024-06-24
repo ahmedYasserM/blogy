@@ -1,0 +1,10 @@
+.postButton {
+  padding: 1em 2em;
+  width: fit-content;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--softBg);
+  color: var(--softText);
+  font-weight: 600;
+  cursor: pointer;
+}

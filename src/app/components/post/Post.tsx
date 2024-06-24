@@ -1,6 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import styles from "./post.module.css";
 import Image from "next/image";
+import { extractContent } from "@/utils/textUtils";
 
 type PostProps = {
   _id: string;
@@ -32,7 +35,7 @@ export default function Post({
           <span className={styles.category}>{catslug}</span>
         </h3>
         <h1 className={styles.postTitle}>{title}</h1>
-        <p className={styles.postDescription}>{descr}</p>
+        <p className={styles.postDescription}>{extractContent(descr)}</p>
         <Link href={`/posts/${slug}`} className={styles.button}>
           Reade More
         </Link>

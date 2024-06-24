@@ -97,3 +97,5 @@ INSERT INTO categories (slug, title, color, img) VALUES ('food', 'Food', '#e0ebc
 INSERT INTO categories (slug, title, color, img) VALUES ('travel', 'Travel', '#E7CFC6', '/travel.png');
 INSERT INTO categories (slug, title, color, img) VALUES ('culture', 'Culture', '#f2e0c9', '/culture.png');
 INSERT INTO categories (slug, title, color, img) VALUES ('coding', 'Coding', '#CECBE7', '/coding.png');
+
+insert into posts (slug, title, descr, img, catSlug, userEmail) values ('how-to-dress', 'How to Dress', 'Dress like a pro', '/dress.jpg', 'style', 'ahmed.yasser98.95@gmail.com');
