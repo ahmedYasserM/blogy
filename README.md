@@ -2,6 +2,9 @@
 
 Blogy is a simple blog applications written in next.js.
 
+![light home page](./doc-images/home-light.png)
+![dark home page](./doc-images/home-dark.png)
+
 ## Features
 
 1. Create a post
